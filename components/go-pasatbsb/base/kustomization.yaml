@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-pasatbsb
+  janus-idp.io/tekton: go-pasatbsb
+  backstage.io/kubernetes-id: go-pasatbsb
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-pasatbsb
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
